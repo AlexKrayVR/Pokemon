@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -49,6 +51,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
@@ -66,4 +72,24 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation ("androidx.navigation:navigation-compose:2.7.7")
+    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+
+    implementation ("io.coil-kt:coil:1.1.1")
+    implementation ("com.google.accompanist:accompanist-coil:0.7.0")
+
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+    implementation("io.ktor:ktor-client-core:2.3.9")
+    implementation("io.ktor:ktor-client-cio:2.3.9")
+
 }
