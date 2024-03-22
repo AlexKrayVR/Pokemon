@@ -1,9 +1,9 @@
 package com.alex.pokemon.data.repos
 
 import com.alex.pokemon.data.api.PokemonApi
-import com.alex.pokemon.data.pokemon.Pokemon
-import com.alex.pokemon.data.pokemonList.PokemonList
-import com.alex.pokemon.di.PokemonRepository
+import com.alex.pokemon.data.api.pokemon.Pokemon
+import com.alex.pokemon.data.api.pokemonList.PokemonList
+import com.alex.pokemon.domain.PokemonRepository
 import com.alex.pokemon.util.Resource
 import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
